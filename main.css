@@ -23,9 +23,11 @@
 html {
     height: 100%;
     font-family: 'Kumbh Sans', sans-serif;
+    overflow: hidden;
 }
 
 body {
+    position: relative;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -33,6 +35,7 @@ body {
     align-items: center;
     background-color: hsl(185, 75%, 39%);
     line-height: 1.7;
+    overflow: inherit;
 }
 
 h2, h3 {
@@ -42,6 +45,36 @@ h2, h3 {
 p {
     font-size: 14px;
 }
+
+/***********************
+*                      *
+* || BACKGROUND RULES  *
+*                      *
+************************/
+
+.circle {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 978px;
+    height: 978px;
+}
+
+.circle--top {
+    background-image: url("images/bg-pattern-top.svg");
+    top: -90%;
+    left: -195%;
+
+}
+
+.circle--bottom {
+    background-image: url("images/bg-pattern-bottom.svg");
+    bottom: -90%;
+    right: -195%;
+    z-index: -1;
+}
+
+
 
 /*******************
 *                  *
@@ -65,11 +98,12 @@ p {
 
 .card {
     position: relative;
-    width: 86%;
+    width: 86.6%;
     height: 375px;
     background-color: white;
     border-radius: 16px;
     overflow: hidden;
+    /* display: none;  */
 }
 
 /************************
@@ -92,12 +126,12 @@ p {
 * || CARD USER INFO RULES  *
 *                          *
 ****************************/
-.card__user-info{
+.card__info{
     position: relative;
     text-align: center;
 }
 
-.user-info__img {
+.card__info__img {
     position: absolute;
     top: -48px;
     left: 50%;
@@ -109,17 +143,17 @@ p {
     box-shadow: 0 0 0 5px white;
 }
 
-.user-info__img img{
+.card__info__img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.user-info__name {
+.card__info__text__name {
     padding-top: 70px;
 }
 
-.age {
+.card__info__text__age {
     font-weight: 400;
     color: hsl(227, 10%, 46%);
     margin-left: 0.3rem;
@@ -132,7 +166,7 @@ p {
 *                           *
 *****************************/
 
-.card__user-stats {
+.card__stats {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -142,19 +176,19 @@ p {
     line-height: 1.5;
 }
 
-.user-stat{
+.card__stats__stat{
     display: inline-block;
     vertical-align: middle;
 }
 
-.user-stat__description{
+.card__stats__stat__description{
     font-size: 11px;
     color:rgba(150, 150, 150);
     letter-spacing: 0.1em;
 }
 
 
-.user-stat:nth-child(2){
+.card__stats__stat:nth-child(2){
     margin-left: 40px;
     margin-right: 40px;
 }
