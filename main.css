@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+/*****************
+*                *
+* || RESET RULE  *
+*                *
+******************/
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/********************
+*                   *
+* || GENERAL RULES  *
+*                   *
+*********************/
+
+html {
+    height: 100%;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(185, 75%, 39%);
+    line-height: 1.7;
+}
+
+h2, h3 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 14px;
+}
+
+/*******************
+*                  *
+* || HELPER RULES  *
+*                  *
+********************/
+
+.dark-blue {
+    color: hsl(229, 23%, 23%);
+}
+
+.dark-gray {
+    color: hsl(227, 10%, 46%);
+}
+
+/*****************
+*                *
+* || CARD RULES  *
+*                *
+******************/
+
+.card {
+    position: relative;
+    width: 86%;
+    height: 375px;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/************************
+*                       *
+* || CARD HEADER RULES  *
+*                       *
+*************************/
+
+.card-header {
+    background-image: url("/images/bg-pattern-card.svg");
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    height: 38%;
+}
+
+
+/***************************
+*                          *
+* || CARD USER INFO RULES  *
+*                          *
+****************************/
+.card__user-info{
+    position: relative;
+    text-align: center;
+}
+
+.user-info__img {
+    position: absolute;
+    top: -48px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    width: 95px;
+    height: 95px;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px white;
+}
+
+.user-info__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-info__name {
+    padding-top: 70px;
+}
+
+.age {
+    font-weight: 400;
+    color: hsl(227, 10%, 46%);
+    margin-left: 0.3rem;
+}
+
+
+/****************************
+*                           *
+* || CARD USER STATS RULES  *
+*                           *
+*****************************/
+
+.card__user-stats {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1.4em 1em 1.3em 1em;
+    text-align: center;
+    border: 1px solid rgba(150, 150, 150, 0.2);
+    line-height: 1.5;
+}
+
+.user-stat{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.user-stat__description{
+    font-size: 11px;
+    color:rgba(150, 150, 150);
+    letter-spacing: 0.1em;
+}
+
+
+.user-stat:nth-child(2){
+    margin-left: 40px;
+    margin-right: 40px;
+}
