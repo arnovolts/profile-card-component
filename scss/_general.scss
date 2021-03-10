@@ -1,0 +1,30 @@
+@use 'reset';
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body{
+    position: relative;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(185, 75%, 39%);
+    line-height: 1.7;
+    font-family: 'Kumbh Sans', sans-serif;
+    overflow: inherit;
+}
+
+h2, h3 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 14px;
+}
